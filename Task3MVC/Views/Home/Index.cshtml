@@ -1,0 +1,26 @@
+﻿@model Task3MVC.ViewModel.AuthorBookVM 
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<select>
+    @foreach(var item in Model.Authors)
+    {
+        <option>@item.Name</option>
+    }
+</select>
+
+<select>
+    @foreach (var item in Model.Books)
+    {
+        <option>@item.Name</option>
+    }
+</select>
+
+
